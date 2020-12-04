@@ -1,9 +1,9 @@
 pipeline {
     agent { label 'master' }
     stages {
-        stage("Check out") {
+        stage("Test") {
             steps {
-                echo 'Hello, JC'
+                sh "./gradlew clean test"
             }
         }
     }
