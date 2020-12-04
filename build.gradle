@@ -44,7 +44,7 @@ pactPublish.dependsOn pactTest
 pact {
     publish {
         pactDirectory = "$buildDir/pacts"
-        pactBrokerUrl = 'http://pact_broker_app_1:80'
+        pactBrokerUrl = 'http://127.0.0.1:80'
         tags = ["test","prod"]
     }
 }
