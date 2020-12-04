@@ -1,6 +1,13 @@
 pipeline {
     agent any
     stages {
+        stage("Install PactBroker") {
+            steps {
+                sh "curl -LO https://github.com/pact-foundation/pact-ruby-standalone/releases/download/v1.88.26/pact-1.88.26-linux-x86_64.tar.gz"
+                sh "tar xzf pact-1.88.26-linux-x86_64.tar.gz"
+                sh "ls pact/bin/"
+            }
+        }
         stage("Test") {
             steps {
                 sh "./gradlew clean test"
