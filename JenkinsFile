@@ -1,9 +1,14 @@
 pipeline {
-    agent { label 'master' }
+    agent any
     stages {
         stage("Test") {
             steps {
-                sh "./gradlew clean pactPublish"
+                sh "./gradlew clean test"
+            }
+        }
+        stage("Publish") {
+            steps {
+                sh "./gradlew pactPublish"
             }
         }
     }
