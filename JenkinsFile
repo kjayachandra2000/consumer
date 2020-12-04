@@ -21,7 +21,7 @@ pipeline {
         }
         stage("Can-I-Deploy") {
             steps {
-                sh 'pact-broker can-i-deploy --pacticipant=BusService --broker-base-url=http://pact_broker_app:80 --latest'
+                sh 'pact/bin/pact-broker can-i-deploy --pacticipant=BusService --broker-base-url=http://pact_broker_app:80 --latest'
             }
         }
     }
