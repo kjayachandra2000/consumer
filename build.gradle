@@ -24,7 +24,9 @@ dependencies {
     // https://mvnrepository.com/artifact/au.com.dius.pact/consumer
 // https://mvnrepository.com/artifact/au.com.dius.pact/consumer
     // https://mvnrepository.com/artifact/au.com.dius/pact-jvm-consumer-junit
-    testImplementation group: 'au.com.dius.pact.consumer', name: 'junit5', version: '4.1.0'
+    testImplementation group: 'au.com.dius.pact.consumer', name: 'junit5', version: '4.1.11'
+    testImplementation group: 'au.com.dius.pact.consumer', name: 'java8', version: '4.1.11'
+
 
 
     implementation 'org.springframework.boot:spring-boot-starter-web'
